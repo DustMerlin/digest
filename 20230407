@@ -1,0 +1,17 @@
+没有 《Large-scale Incremental Processing Using Distributed Transactions and Notiﬁcations》 这个论文吗？
+作者回复: Percolator 这个系统高度和搜索引擎的索引更新相关，考虑到整个专栏的通用性，以及篇幅的限制，所以没有选择讲解这篇论文。
+2021-09-26
+
+ptp: 不使用公网ip 互相链接
+https://blog.csdn.net/SAMCYC/article/details/106481529
+
+给你一些“参考文献”学习还是要花笨功夫的。在课程之外，多阅读、多搜索、多看不同来源的资料，多和朋友、同事、老师一起交流，一定能够帮你掌握好要学习的知识点。在整个大数据领域，也有许多经典图书和论文。我在每一讲里，也都会留下一些“推荐阅读”的资料。在这里，我也给你推荐一些我自己读过、看过的经典书籍和课程。如果你想深入理解大数据技术，读一读这些内容，绝不会让你后悔的。首先是 Storm 的作者南森·马茨（Nathan Marz）的“Big Data”，现在也有中译本叫做《大数据系统构建》。对于人为错误的容错问题的思考，为我们带来了著名的 Lambda 架构。在我看来，即使到今天 Lambda 架构也并不过时。其次是俗称 DDIA 的这本《数据密集型应用系统设计》，这本书梳理了整个大数据领域的核心技术脉络，是一本非常合适的架构入门书。第三本是专注于流式处理的《Streaming System》，不过目前还没有中译本上市。如果你更喜欢通过视频课程学习，那么去看一看来自 MIT 的课程 6.824 的 Distributed System 绝对错不了。我在这里放上了Youtube和B 站的视频链接。最后是一份很容易被人忽视的资料，就是 2009 年 Jeff Dean 在 Cornell 大学的一个讲座“Designs， Lessons and Advice from Building Large Distributed Systems”的 PPT，我也推荐你去看一看，对于理解大数据系统的真实应用场景很有帮助。
+
+https://book.douban.com/subject/26960399/
+https://book.douban.com/subject/30329536/
+https://book.douban.com/subject/27080632/
+
+MIT 分布式系统
+https://www.bilibili.com/video/BV1x7411M7Sf/?p=1
+
+https://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf
