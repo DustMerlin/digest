@@ -1,0 +1,12 @@
+https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
+
+https://www.x.org/wiki/XKB/
+
+https://bugs.freedesktop.org/show_bug.cgi?id=23070
+
+https://bugs.freedesktop.org/show_bug.cgi?id=65352
+
+Landry Breuil 2013-06-17 08:48:08 UTC
+我们的 xkeyboard-config 中确实存在问题，已在此处修复：http://anoncvs.estpak.ee/cgi-bin/cgit/openbsd-xenocara/commit/ ?id=2f8d51879902baee2bf0746167f352d4dc1f2c08
+
+如何使用上述的cvs系统
