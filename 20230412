@@ -1,0 +1,78 @@
+http://nathanmarz.com/blog/the-mathematics-behind-hadoop-based-systems.html
+
+Linux 下常用命令与技巧汇总
+https://xixiliguo.github.io/linux/linux-common-commands.html
+
+Linux 文件描述符 fd 究竟是什么？
+https://www.51cto.com/article/663060.html
+
+Python __init__.py 作用详解
+https://www.jianshu.com/p/73f7fbf75183
+
+代码中特殊注释——TODO、FIXME、XXX、HACK
+https://blog.csdn.net/diehuang3426/article/details/79725745
+
+KIWI的安装及使用
+https://bbs.huaweicloud.com/blogs/100378
+
+anaconda languange and support
+
+/anaconda-33.16.4.15/pyanaconda/modules/localization/localization.py
+
+189     def install_with_tasks(self):
+190         """Return the installation tasks of this module.
+191 
+192         :returns: list of installation tasks
+193         """
+194         return [
+195             LanguageInstallationTask(
+196                 sysroot=conf.target.system_root,
+197                 lang=self.language
+198             ),
+199             KeyboardInstallationTask(
+200                 sysroot=conf.target.system_root,
+201                 localed_wrapper=self.localed_wrapper,
+202                 x_layouts=self.x_layouts,
+203                 switch_options=self.switch_options,
+204                 vc_keymap=self.vc_keymap
+205             )
+206         ]
+
+106     @property
+107     def language(self):
+108         """Return the language."""
+109         return self._language
+110 
+111     def set_language(self, language):
+112         """Set the language."""
+113         self._language = language
+114         self.language_changed.emit()
+115         log.debug("Language is set to %s.", language)
+116 
+117     @property
+118     def language_support(self):
+119         """Return suppored languages."""
+120         return self._language_support
+121 
+122     def set_language_support(self, language_support):
+123         """Set supported languages."""
+124         self._language_support = language_support
+125         self.language_support_changed.emit()
+126         log.debug("Language support is set to %s.", language_support)
+
+
+ /anaconda-33.16.4.15/pyanaconda/ui/tui/spokes/language_support.py
+
+71         self._l12_module = LOCALIZATION.get_proxy()
+72 
+73         self._selected = self._l12_module.Language
+
+119     def _set_locales_callback(self, data):
+120         locale = data
+121         self._selected = locale
+122         self.apply()
+123         self.close()
+
+149     def apply(self):
+150         """ Store the selected lang support locales """
+151         self._l12_module.SetLanguage(self._selected)
