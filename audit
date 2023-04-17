@@ -1,0 +1,30 @@
+audit 审计
+
+注意启动命令的顺序
+service auditd start
+systemctl enable/disable auditd 
+其余操作不可做
+建议还是使用service audit start
+
+查看状态
+auditctl -s
+只要enabled 状态为1，重启就会最开始加载配置，然后实现监控
+
+如果当前环境立即需要检测，则使用service start
+
+-w /etc/machine-id -p x/w -k keyname
+以上配置可以直接在auditctl 命令添加
+但是只有写入到配置文件的规则才永久有效
+
+-p 选择 写或者执行权限的监控，-k 设置key 方便ausearch 查找对应日志
+
+或者在 /etc/audit/rules.d/audit.rules
+重启后，配置被加载到/etc/audit/audit.rules
+不要直接把配置写在后一个文件中，在重启时，
+该文件会从rules.d 文件中读取，覆盖当前文件
+
+查看定义的规则
+auditctl -l
+
+清空定义的规则
+auditctl -D
