@@ -1,0 +1,45 @@
+audit 相关的配置，此审计与用户态调用相关
+内核命令行参数，可以控制audit的启动
+grub.cfg 中 audit=0 ，则不启动audit内核模块
+https://www.cnblogs.com/xingmuxin/p/8675294.html
+
+makefile.in makefile.am
+https://stackoverflow.com/questions/2531827/what-are-makefile-am-and-makefile-in
+
+DEVELOPER runs autoconf and automake:
+autoconf -- creates shippable configure script
+(which the installer will later run to make the Makefile)
+‘autoconf’ is a macro processor.
+It converts configure.ac, which is a shell script using macro instructions, into configure, a full-fledged shell script.
+automake - creates shippable Makefile.in data file
+(which configure will later read to make the Makefile)
+Automake helps with creating portable and GNU-standard compliant Makefiles.
+‘automake’ creates complex Makefile.ins from simple Makefile.ams
+INSTALLER runs configure, make and sudo make install:
+./configure       # Creates  Makefile        (from     Makefile.in).  
+make              # Creates  the application (from the Makefile just created).  
+
+sudo make install # Installs the application 
+                  #   Often, by default its files are installed into /usr/local
+INPUT/OUTPUT MAP
+Notation below is roughly: inputs --> programs --> outputs
+
+DEVELOPER runs these:
+
+configure.ac -> autoconf -> configure (script) --- (*.ac = autoconf)
+configure.in --> autoconf -> configure (script) --- (configure.in depreciated. Use configure.ac)
+
+Makefile.am -> automake -> Makefile.in ----------- (*.am = automake)
+
+INSTALLER runs these:
+
+Makefile.in -> configure -> Makefile (*.in = input file)
+
+Makefile -> make ----------> (puts new software in your downloads or temporary directory)
+Makefile -> make install -> (puts new software in system directories)
+
+%bcond_with test1
+%bcond_without test2
+without -> 1
+%if %{with test2} 执行 block 内容
+https://blog.csdn.net/weixin_44569394/article/details/124345149/
